@@ -1,5 +1,4 @@
-# Heading:
-[PLACEHOLDER NAME]
+
 
 ## Motivation:
 
