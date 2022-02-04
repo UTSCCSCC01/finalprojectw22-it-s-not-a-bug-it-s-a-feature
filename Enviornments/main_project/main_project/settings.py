@@ -56,7 +56,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, '/Users/sasan/OneDrive/Desktop/CSC301/CSC301 Proj/Enviornments/main_project/frontend/build'),
+            # os.path.join(BASE_DIR, '/Users/sasan/OneDrive/Desktop/CSC301/CSC301 Proj/Enviornments/main_project/frontend/build'),
+            os.path.join(BASE_DIR, 'frontend/public'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -121,7 +122,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, '/Users/sasan/OneDrive/Desktop/CSC301/CSC301 Proj/Enviornments/main_project/frontend/build/static'),
+    # os.path.join(BASE_DIR, '/Users/sasan/OneDrive/Desktop/CSC301/CSC301 Proj/Enviornments/main_project/frontend/build/static'),
+    os.path.join(BASE_DIR, 'frontend/public/'),
 ]
 
 # Default primary key field type

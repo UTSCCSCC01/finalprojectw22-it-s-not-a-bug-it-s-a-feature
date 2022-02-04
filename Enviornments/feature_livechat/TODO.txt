@@ -1,0 +1,10 @@
+|                           Task                            |       Status       |
+|-----------------------------------------------------------|--------------------|
+|Separate chatrooms for each streamer                       |     Incomplete     |   <- working on 
+|Display usernames and time for each chat message           |     Incomplete     |   <- working on
+|Integrate feature into main project (frontend)             |     Incomplete     |
+|Change template from html file to using React              |     Incomplete     |
+|implementsend and receive functions of real-time chat      |     Completed!     |
+|Integrate feature into main project (backend)              |     Incomplete     |
+|Redirect to user profile when clicked on displayed username|     Incomplete     |
+|                                                           |                    |
