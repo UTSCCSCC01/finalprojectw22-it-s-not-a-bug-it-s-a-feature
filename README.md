@@ -25,20 +25,31 @@ npm install
 npm run build
 
 
-At this point your build of the front end has successfully been built and you may move on to backend Installation
+At this point your build of the front end has successfully been built.
+To run the front end, use the command:
+
+npm start
+
+Now you are ready to move on to backend Installation
 
 ### backend
 The backend of this fullstack project has been set to Django. Before proceeding to running the server, there are a few steps we need to take.
 
-- Firstly, run the environment folder provided in the files. You can do so by simply typing in:
-Enviornments\project_env\Scripts\activate.bat
-And with that done, you are in the virtual environment. Afterwards, please navigate to the main_project folder. In here there exists a requirements.txt file that includes all the packages you are going to need moving forward. Please install these packages with the following command
+- Firstly, change directory to Enviornments. *IT IS CRITICAL THAT YOU HAVE PYTHON 3.10.2 INSTALLED*. Then, create a virtual environment for this project using the command:
+
+python3 -m venv .venv
+
+- Run the environment. You can do so using the following command:
+
+Enviornments\.env\Scripts\activate
+
+And with that done, you are in the virtual environment. 
+The requirements.txt file includes all the packages you are going to need moving forward. Please install these packages with the following command:
 pip install -r requirements.txt
 
-- You are now ready to move on to running the server. *IT IS CRITICAL THAT YOU HAVE PYTHON INSTALLED FOR THE NEXT PART*. While in the main_project folder simply write the following command:
+- You are now ready to move on to running the server. While in the main_project folder simply write the following command:
 python manage.py runserver
 
-*ATTENTION: please undestand that before running the server you need to change the directory of the static HTML, CSS and other fils in the settings.py within the folder names main_project to the correct directory within your own computer*
 
 congratulations, you are now running a build of our product.
 
