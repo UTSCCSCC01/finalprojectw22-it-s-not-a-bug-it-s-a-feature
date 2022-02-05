@@ -21,6 +21,7 @@ npm -v
 Given the above is true, after all the changes are made and saved simply type into the command while you are in the directory of the frontend files
 
 npm install
+
 npm run build
 
 
