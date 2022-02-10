@@ -4,13 +4,13 @@ const userinput = document.getElementById('msg');
 const chatbox = document.getElementById('chatbox');
 const errorbox = document.getElementById('errortext');
 const join_indicator = document.getElementById('join-indicator');
-const userid = document.getElementById('userid');
+
 
 socket.on('chat_message', message => {
     addtoChatbox(message);
 });
 
-socket.emit('join', room, userid);
+socket.emit('join', room);
 
 inputbox.addEventListener('submit', event => {
     event.preventDefault();

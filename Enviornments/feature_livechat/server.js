@@ -51,7 +51,7 @@ app.get('/stream/:streamer',(request, response) =>{
 
 io.on('connection', socket => {
     socket.on("join", (room) => {
-        console.log(room + 'joined');
+        socket.join(room);
         //rooms[room]['normal'][socket] = userid;
     })
     socket.on('new_chat', (room, message) => {

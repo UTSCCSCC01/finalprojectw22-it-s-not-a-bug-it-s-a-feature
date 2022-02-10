@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html class="index">
+<html id="index">
 <head>
     <title>Test Index</title>
     <link rel="stylesheet" href="/static/style.css">
     <script defer src='/socket.io/socket.io.js'></script>
     <script defer src='/static/script.js'></script>
+    
 </head>
-<body id="join-indicator">
+<body id="test-index-page">
     <h1>Enter streamer name:</h1>
     <h3>(For test purpose only. Assume every streamer name entered is valid)</h3>
 
     <form action='room' id='selector' method = 'post'>
+        <label>Streamer:</label>
         <input type='text' name='streamer' id="selector_textbox" value="test1" minlength="1"><br>
+        <label>Userid:</label>
         <input type='text' name='userid' id="temp_userid_textbox" required><br> 
         <!--placeholder. use cookie to identify logged in user in later stage-->
         <p id="errortext" style="color:rgb(192, 16, 16)"></p>
