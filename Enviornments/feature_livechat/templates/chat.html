@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>live chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script defer src='/socket.io/socket.io.js'></script>
+    <script defer src='/static/script.js'></script>
+</head>
+<body>
+    <h1 id = 'chat_titlebox'></h1>
+    <!-- adds name of the streamer to the chatroom title-->
+    <script>
+        const segments = window.location.pathname.split('/');
+        const room = segments.pop() || segments.pop();
+        document.getElementById("chat_titlebox").innerText = room;
+    </script>
+    <div id = 'pinned_message'>
+        <!-- Functionality to be implemented -->
+    </div>
+    <div id = 'chatbox'>
+
+    </div>
+    <form id = 'inputbox' method = 'post'>
+        <input type='text' name='msg' id='msg' placeholder='Say hello to the chat!' minlength="1">
+        <button type="submit" id='send_button'>Send</button>
+    </form>
+</body>
+</html>

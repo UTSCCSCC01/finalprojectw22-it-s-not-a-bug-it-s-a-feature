@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="index">
+<head>
+    <title>Test Index</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script defer src='/socket.io/socket.io.js'></script>
+    <script defer src='/static/script.js'></script>
+</head>
+<body id="join-indicator">
+    <h1>Enter streamer name:</h1>
+    <h3>(For test purpose only. Assume every streamer name entered is valid)</h3>
+
+    <form action='room' id='selector' method = 'post'>
+        <input type='text' name='streamer' id="selector_textbox" value="test1" minlength="1"><br>
+        <input type='text' name='userid' id="temp_userid_textbox" required><br> 
+        <!--placeholder. use cookie to identify logged in user in later stage-->
+        <p id="errortext" style="color:rgb(192, 16, 16)"></p>
+        <small>Simulates user login. Test purpose only.</small>
+        <button type="submit" class='confirm_button'>Redirect</button>
+    </form>
+    <div>
+            <!--- on the right side show active streamers as well as option to shut down the room
+            (later on to be integrated with streamer's endstream) --->
+    </div>
+</body>
+</html>
