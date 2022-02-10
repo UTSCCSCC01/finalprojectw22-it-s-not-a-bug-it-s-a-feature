@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Signup</title>
+
+		<style>
+        html {
+            font-family: Arial;
+        }
+
+		input {
+			width: 40%;
+			height: 30px;
+			border: 1px solid;
+			margin: 5px 10px;
+			font-size: 1.2rem;
+		}
+
+		label {
+            text-align: right;
+			line-height: 45px;
+		}
+
+		button {
+			background: orange;
+			width: 120px;
+			height: 40px;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.1rem;
+            grid-column: 1 / 3;
+            margin: auto;
+		}
+
+        .container {
+            display: grid;
+            justify-content: center;
+            flex-direction: column;
+            grid-template-columns: 40% 60%;
+            grid-row-gap: 20px;
+        }
+
+        .container div {
+            grid-column: 1 / 3;
+            text-align: center;
+        }
+
+        .container div {
+            grid-column: 1 / 3;
+            text-align: center;
+        }
+
+        text {
+            grid-column: 1 / 3;
+            text-align: center
+        }
+
+		</style>
+
+	</head>
+	<body>
+            <form class="container" action="http://localhost:8000/signup/" method="POST">
+				<div>
+					<h2>Please enter your information</h2>
+                    <br>
+                    <h3>{{ error }}</h3>
+				</div>
+                {% csrf_token %}
+                    <label for="input-username"> Username </label>
+                    <input id="input-username" type="text" name="username" value="{{ request.POST.username }}" />
+
+                    <label for="input-email"> Email </label>
+                    <input id="input-email" type="email" name="email" />
+
+                    <label for="input-password"> Password </label>
+                    <input id="input-password" type="password" name="password" />
+
+                    <label for="input-repeat-password"> Repeat password </label>
+                    <input id="input-repeat-password" type="password" name="password2" />
+
+                <button type="submit">Sign me up!</button>
+
+                <text>Already a user?
+                <a href="{% url 'login' %}">Login</a></text>
+
+            </form>
+	</body>
+</html>
