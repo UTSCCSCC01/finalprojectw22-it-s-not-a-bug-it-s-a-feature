@@ -5,8 +5,9 @@
     {% endfor %}
 </ul>
 {% endif %}
-
+<body style="background-color:rgb(206, 206, 206);"></body>
 <div>
+    <h2> Log In </h2>
     <form method="POST" action="">
         {% csrf_token %}
         <label>Username:</label>
@@ -20,4 +21,4 @@
 </div>
 
 <p> Haven't signed up yet?</p>
-    <a href="{% url 'signup' %}">Sign up</a>
+    <a href="{% url 'signup' %}" style="color:rgb(32, 178, 170)">Sign up</a>

@@ -25,7 +25,7 @@ def loginPage(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('room')
+            return redirect('home')
         else:
             messages.error(request, 'Username OR password does not exist')
     context = {'page':page}
@@ -34,10 +34,6 @@ def loginPage(request):
 def logoutUser(request):
     logout(request)
     return redirect('login')
-
-
-def room(request):
-    return render(request, 'base/room.html')
 
 def home(request):
     return render(request, 'base/home.html')
@@ -50,6 +46,8 @@ def signup(request):
         error = ''
         if not request.POST['username']:
             error = "Username is required"
+        if not request.POST['password']:
+            error = "Password is required"
         if request.POST['password'] != request.POST['password2']:
             error = "Passwords do not match"
 
