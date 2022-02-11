@@ -3,16 +3,17 @@ Node.js must be installed locally on your computer
 
 Install Express
 
-### 'npm install express'
+'npm install express'
 
 Install nodemon
 
-### 'npm install nodemon'
+'npm install nodemon'
 
 Run the Server
 
-### 'nodemon profile.js'
+'nodemon profile.js'
 
+Open http://localhost:4000
 
 # Getting Started with Create React App
 
