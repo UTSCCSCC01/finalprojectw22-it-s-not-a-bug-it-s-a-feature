@@ -1,3 +1,19 @@
+# Running the Node.js Server
+Node.js must be installed locally on your computer
+
+Install Express
+
+### 'npm install express'
+
+Install nodemon
+
+### 'npm install nodemon'
+
+Run the Server
+
+### 'nodemon profile.js'
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
