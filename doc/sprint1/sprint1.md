@@ -4,7 +4,7 @@
 Sprint Goals: 
 * Implement basic live-stream and live-chat functionality.
 * Design and develop the frontend of the web application.
-
+* Develop user authentication and user authroization
 
 
 
@@ -37,7 +37,6 @@ User Story 4 Subtasks:
 * Implement a frontend to display user livestream
 User Story 5 Subtasks:
 * Design and develop browse page frontend
-
 
 
 
