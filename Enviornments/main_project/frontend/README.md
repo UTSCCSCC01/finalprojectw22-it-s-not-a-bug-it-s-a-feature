@@ -13,7 +13,7 @@ Run the Server
 
 ### `nodemon profile.js`
 
-Open http://localhost:4000
+Open http://localhost:4000 to view it in your browser
 
 # Getting Started with Create React App
 
