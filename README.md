@@ -54,6 +54,12 @@ python manage.py runserver
 congratulations, you are now running a build of our product.
 
 
+### User Authentication
+
+On the main page there is a Login link that directs user to a login page.The login page has input fields for username and password. For incorrect user or password inputs a flash message appears indicating the input that caused an error such as, "User does not exist". Otherwise on success the user is returned to the home page where the previous Login url link is changed to a Logout url link.
+
+Under the login page there's a signup link that redirects to the signup page and a login link under the signup link if the user has an account already. In the signup page there are fields that must be filled such as the username, password, and email. On different inputs a user may be asked to correct an entered input depending on errors. As of 2/10/2022 the sign in is not yet fully error free. On success the user should be returned back to the home page.
+
 ## Contribution
 - We do use gitflow. And the branches are named after the implementation they are focused on.
 - We use Github as our ticketing website
