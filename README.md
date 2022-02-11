@@ -9,7 +9,27 @@ On the other hand our product eliminates the need for creators to divide their c
 Our mission is to create a safe and friendly environment for users of all background to interact and watch whatever content they please to.
 
 ## Installation:
-This is a full stack project. The backend is set to the Django framework, frontend is set to React.js and we use MySQL as database.
+This is a full stack project. The backend is set to the Django framework, frontend is set to React.js and we use MySQL as database. Please follow the following instructions from the top to bottom as they are written in order.
+
+
+### backend
+The backend of this fullstack project has been set to Django. Before proceeding to running the server, there are a few steps we need to take.
+
+- Firstly, change directory to Enviornments. *IT IS CRITICAL THAT YOU HAVE PYTHON 3.10.2 INSTALLED*. Then, create a virtual environment for this project using the command:
+
+python3 -m venv .venv
+
+- Run the environment. You can do so using the following command:
+
+Enviornments\.venv\Scripts\activate
+
+And with that done, you are in the virtual environment. 
+The requirements.txt file includes all the packages you are going to need moving forward. Please install these packages with the following command:
+pip install -r requirements.txt
+
+- You are now ready to move on to running the server. While in the main_project folder simply write the following command:
+python manage.py runserver
+
 
 ### Frontend
 The Front end has been set to Node.js. If you do not plan on making changes to the script, feel free to move on to the next step. However, in the chance that you do plan on making changes, the following is necessary.
@@ -29,26 +49,6 @@ At this point your build of the front end has successfully been built.
 To run the front end, use the command:
 
 npm start
-
-Now you are ready to move on to backend Installation
-
-### backend
-The backend of this fullstack project has been set to Django. Before proceeding to running the server, there are a few steps we need to take.
-
-- Firstly, change directory to Enviornments. *IT IS CRITICAL THAT YOU HAVE PYTHON 3.10.2 INSTALLED*. Then, create a virtual environment for this project using the command:
-
-python3 -m venv .venv
-
-- Run the environment. You can do so using the following command:
-
-Enviornments\.env\Scripts\activate
-
-And with that done, you are in the virtual environment. 
-The requirements.txt file includes all the packages you are going to need moving forward. Please install these packages with the following command:
-pip install -r requirements.txt
-
-- You are now ready to move on to running the server. While in the main_project folder simply write the following command:
-python manage.py runserver
 
 
 congratulations, you are now running a build of our product.
