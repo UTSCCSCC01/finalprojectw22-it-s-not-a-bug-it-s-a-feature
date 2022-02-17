@@ -225,3 +225,9 @@ Tracking on Jira Total Mark: 11 / 20
 ## Total Mark
 
 63 / 87
+
+
+## Notes
+Sprint1 was not started on Jira. Tasks were not tracked. Marks were lost for this because we cannot accurately tell which tasks were started. Had to base it on how many branches there are and if they matched Jira user stories. Also not totally accurate since they were not named with their associated ticket number.
+
+So please close off sprint1 and start sprint2 on Jira, otherwise you will lose marks on sprint2 too.
