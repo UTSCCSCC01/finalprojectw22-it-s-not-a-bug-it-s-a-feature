@@ -48,8 +48,8 @@
 
 #live_chat-wrap {
     grid-row: 1;
-    overflow-x: auto;
     overflow-y: hidden;
+    height: 100%;
 }
 
 #live_chat-container > #live_chat-wrap > #chatbox-cont {
@@ -126,4 +126,20 @@
     margin-right: 0;
     padding: 0 0.5vw;
     grid-row: 2;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
