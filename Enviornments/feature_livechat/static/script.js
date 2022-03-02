@@ -15,15 +15,27 @@ socket.emit('join', room);
 inputbox.addEventListener('submit', event => {
     event.preventDefault();
     const msg = userinput.value;
-    socket.emit('new_chat', room, msg);
+    if (msg.length != 0) {
+        socket.emit('new_chat', room, msg);
     userinput.value = '';
     addtoChatbox(msg);
+    }
 }); 
 
 function addtoChatbox(message){
+    const container = document.createElement('div');
+    const img = document.createElement('img');
+    const name = document.createElement('div')
     const para = document.createElement('p');
+    // test purpose
+    img.src = "https://img.rankedboost.com/wp-content/uploads/2019/05/WoW-Classic-Warrior-Guide.png"
+    name.innerHTML = "user"
+    //
     para.innerText = message;
-    chatbox.append(para);
+    container.appendChild(img);
+    container.appendChild(name);
+    container.appendChild(para);
+    chatbox.append(container);
 };
 
 
