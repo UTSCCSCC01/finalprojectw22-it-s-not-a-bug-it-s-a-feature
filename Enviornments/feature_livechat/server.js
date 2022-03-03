@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const http = require('http');
+const fs = require("fs");
 
 const cors = require('cors');
 var bodyParser = require('body-parser')
@@ -29,6 +30,10 @@ app.get('/', (request, response) =>{
     response.sendFile(__dirname + '/templates/test_index.html') 
 })
 
+app.get("/", function(req, res) {
+    res.sendFile(__dirname + "/templates/index.html");
+});
+
 app.post('/room', (request, response) =>{      // redirect to corresponding streamer's live chat
     const streamer = request.body.streamer;
     const viewer = request.body.userid;
@@ -42,6 +47,37 @@ app.get('/stream/:streamer',(request, response) =>{
     // redirect to the chatroom of that streamer, which url is http://path/<streamer>/
     // need to send {roomName: request.params.streamer} Object 
     response.sendFile(__dirname + '/templates/chat.html');
+});
+
+app.get("/video", function(req, res) {
+    const range = req.headers.range;
+    if(!range) {
+        res.status(400).send("Requires Range Header");
+    }
+
+    const videoPath = "bigBuck.mp4";
+    const videoSize = fs.statSync("bigbuck.mp4").size;
+
+    const CHUNK_SIZE = 10 ** 6;
+    const start = Number(range.replace(/\D/g, ""));
+    const end= Math.min(start + CHUNK_SIZE, videoSize - 1);
+
+    const contentLenght = end - start + 1;
+    const headers = {
+        "Content-Range": `bytes ${start}-${end}/${videoSize}`,
+        "Accept-Ranges": "bytes",
+        "Content-Length": contentLenght,
+        "Content-Type": "video/mp4", 
+    };
+
+    res.writeHead(206, headers);
+
+  // create video read stream for this particular chunk
+  const videoStream = fs.createReadStream(videoPath, { start, end });
+
+  // Stream the video chunk to the client
+  videoStream.pipe(res);
+
 });
 
 // TODO:

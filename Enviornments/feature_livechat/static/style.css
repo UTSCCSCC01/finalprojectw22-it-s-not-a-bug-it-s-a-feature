@@ -44,6 +44,15 @@
     border-image: radial-gradient(lightseagreen, #1f2227, lightseagreen) 1;
     padding: 0 1vw;
 }
+
+#vod_container {
+    grid-row: 1/5;
+    grid-column: 1;
+    border: 5px solid;
+    border-image: radial-gradient(lightseagreen, #1f2227, lightseagreen) 1;
+    padding: 0 1vw;
+}
+
 #live_chat-container > #chatbox {
     width: 94%;
     height: 80%;

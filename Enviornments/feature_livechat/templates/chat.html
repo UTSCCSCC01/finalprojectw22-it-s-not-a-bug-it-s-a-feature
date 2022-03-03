@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/style.css">
     <script defer src='/socket.io/socket.io.js'></script>
     <script defer src='/static/script.js'></script>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
 </head>
 <body id="chat-page">
@@ -14,6 +14,12 @@
         Navbar
     </div>
     <div id="gridcontainer">
+        <div id="vod_container">
+            <video id="videoPlayer" width="650" controls muted="muted" autoplay>
+                <source src="/video" type="video/mp4" />
+              </video>
+              <h3>Stream playback</h3>
+        </div>
         <div id="stream-container">
             Stream
         </div>
