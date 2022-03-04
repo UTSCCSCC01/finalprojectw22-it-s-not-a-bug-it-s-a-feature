@@ -14,9 +14,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
-
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { CardActionArea } from '@mui/material';
 
 export const themeOptions = {
   palette: {
@@ -93,23 +92,25 @@ export default function Home() {
                 <Card variant="outlined"
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      // 16:9
-                      pt: '0%',
-                    }}
-                    image="https://cdn.discordapp.com/attachments/919720082270203956/946920455942578267/unknown.png"
-                    alt="no"
-                  />
-                  <CardContent sx={{ flexGrow: 1 }}>
-                    <Typography gutterBottom variant="h5" component="h2" color="primary">
-                      Title
-                    </Typography>
-                    <Typography color="primary">
-                      Stream details
-                    </Typography>
-                  </CardContent>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      sx={{
+                        // 16:9
+                        pt: '0%',
+                      }}
+                      image="https://media.discordapp.net/attachments/881566442770808842/949096310068359188/unknown.png"
+                      alt="no"
+                    />
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Typography gutterBottom variant="h5" component="h2" color="primary">
+                        Title
+                      </Typography>
+                      <Typography color="primary">
+                        Stream details
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
                   <CardActions>
                     <Button color="primary" size="small" variant="contained">
                       Join Stream
@@ -125,7 +126,7 @@ export default function Home() {
         </Container>
       </main>
       {/* Footer */}
-      <Box sx={{ bgcolor: 'rgba(100,255,218,0.82)', p: 6 }} component="footer">
+      <Box sx={{ bgcolor: '#2cc47d', p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
           Tunein.TV
         </Typography>
