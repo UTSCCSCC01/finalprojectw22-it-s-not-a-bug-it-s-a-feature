@@ -56,14 +56,7 @@ export default function Home() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <AppBar position="static">
-        <Toolbar>
-          <CameraIcon sx={{ mr: 2 }} />
-          <Typography variant="h6" color="inherit" noWrap>
-            TuneIn.TV
-          </Typography>
-        </Toolbar>
-      </AppBar>
+     
       <main>
         {/* Hero unit */}
         <Box
