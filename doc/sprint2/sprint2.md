@@ -7,7 +7,7 @@ Sprint Goals:
 * Create a responsive database that records user auth and also their individual account features
 
 
-Sprint 1 User Stories:
+Sprint 2 User Stories:
 
 
 1. As a user, I would like to be able to create, edit and view my account.
@@ -20,6 +20,10 @@ User Story 1 Subtasks:
 1. Create user authentication with nodejs
 2. Setup routes and api endpoints for register, login, lgout, view, edit pages
 3. Create temporary views to interact with the application
+
+User Story 3 Subtasks:
+1. Build the navigation bar/login screen/signup screen, connectivity between all the pages
+2. Building the interface showing the current live streams and click on effects
 
 User Story 4 Subtasks:
 1. create and implement the fucntionality within node.js to present a vod on the home page.
