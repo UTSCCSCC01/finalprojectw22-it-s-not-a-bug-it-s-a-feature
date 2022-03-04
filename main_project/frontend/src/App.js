@@ -1,23 +1,31 @@
+import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import { Route, Link, BrowserRouter, Routes } from 'react-router-dom';
+import Login from './Login';
+import NavBar from './NavBar';
+import Home from './Home';
+import BrowseStream from './BrowseStream';
+import Stream from './Stream';
+import SignUp from './SignUp';
 
 function App() {
   return (
     <div className="App">
+      
+      
+      
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          What's up CSC301 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <NavBar />
       </header>
+      <Routes>
+        <Route exact path="/" element={ <Home/>} />
+        <Route exact path="/Login" element={ <Login/>} />
+        <Route exact path="/BrowseStream" element={ <BrowseStream/>} />
+        <Route exact path="/Stream" element={ <Stream/>} />
+        <Route exact path="/SignUp" element={ <SignUp/>} />
+      </Routes>
+
     </div>
   );
 }
