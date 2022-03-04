@@ -15,3 +15,4 @@ Product Backlog
 13. As a streamer, I would like my loyal viewers to have more exclusive features given to them such as no advertisements.
 14. As a user, I would like to find streams that are in my native language
 15. As a user, I would like to learn how to start becoming a streamer
+16. As a user, I would like in the live chat to see who I was talking to and access their user page, so that I can easily know others in the community.
