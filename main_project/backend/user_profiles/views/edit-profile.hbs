@@ -1,0 +1,22 @@
+<h2>Edit your profile</h2>
+<form action="/users" method="POST">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" name="name" id="name" value="{{ name }}">
+  </div>
+  <div class="form-group">
+    <label for="location">Location:</label>
+    <input type="text" class="form-control" name="location" id="location" value="{{ location }}">
+  </div>
+  <div class="form-group">
+    <label for="youtube">Youtube:</label>
+    <input type="text" class="form-control" name="youtube" id="youtube" value="{{ youtube }}">
+  </div>
+  <div class="form-group">
+    <label for="twitter">Twitter:</label>
+    <input type="text" class="form-control" name="twitter" id="twitter" value="{{ twitter }}">
+  </div>
+  <button class="btn btn-primary">Edit Profile</button>
+</form>
+<br>
+<p><a href="/users/{{username}}" target="_blank">My profile</a></p>
