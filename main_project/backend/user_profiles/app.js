@@ -12,6 +12,14 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const hbs = require('hbs');
 const authUtils = require('./utils/hash');
+const middleware = require('connect-ensure-login'),
+                  express = require('express'),
+                  Session = require('express-session'),
+                  bodyParse = require('body-parser'),
+                  FileStore = require('session-file-store')(Session),
+                  config = require('./config/default'),
+                  flash = require('connect-flash'),
+                  NodeMediaServer = require('./media_server');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -60,9 +68,13 @@ passport.deserializeUser((id, done) => {
 });
 
 // view engine setup
+app.use(express.static('public'));
+app.use(flash());
+app.use(require('cookie-parser')());
+app.use(bodyParse.urlencoded({extended: true}));
+app.use(bodyParse.json({extended: true}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -70,9 +82,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
-  secret: 'secret',
-  resave: false,
-  saveUninitialized: false,
+  // secret: 'secret',
+  // resave: false,
+  // saveUninitialized: false,
+  store: new FileStore({
+  path : './server/sessions'
+  }),
+  secret: config.server.secret,
+  maxAge : Date().now + (60 * 1000 * 30)
 }));
 
 app.use(passport.initialize());
@@ -104,5 +121,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
+node_media_server.run();
 module.exports = app;
