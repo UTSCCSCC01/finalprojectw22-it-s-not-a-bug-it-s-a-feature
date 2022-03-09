@@ -42,36 +42,73 @@
     grid-column: 2;
     border: 5px solid;
     border-image: radial-gradient(lightseagreen, #1f2227, lightseagreen) 1;
-    padding: 0 1vw;
+    display: grid;
+    grid-template-rows: auto 8%;
 }
 
-#vod_container {
-    grid-row: 1/5;
-    grid-column: 1;
-    border: 5px solid;
-    border-image: radial-gradient(lightseagreen, #1f2227, lightseagreen) 1;
-    padding: 0 1vw;
+#live_chat-wrap {
+    grid-row: 1;
+    overflow-y: hidden;
+    height: 100%;
 }
 
-#live_chat-container > #chatbox {
+#live_chat-container > #live_chat-wrap > #chatbox-cont {
     width: 94%;
-    height: 80%;
-    max-height: 80%;
-    overflow-y: auto;
+    min-height: 0;
+    max-height: 88%;
+    overflow: auto;
     margin-bottom: 2vh;
     margin-left: 1vw;
+    padding-right: 0.5vw;
+    caret-color: transparent;
+    display: flex;
+    flex-direction: column-reverse;
 }
 
-#chatbox > p {
+#chatbox > div {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 24px auto;
+    padding-right: 0.5vw;
+    caret-color: transparent;
+}
+
+#chatbox > div:hover {
+    background-color: rgb(62, 64, 65, 0.8);
+}
+
+#chatbox > div > img {
+    grid-row: 1/3;
+    grid-column: 1;
+    height: 35px;
+    width: 35px;
+    margin-top: 0.5vh;
+}
+
+#chatbox > div > div {
+    grid-column: 2;
+    grid-row: 1;
+    font-weight: 600;
+    font-size: large;
+    caret-color: transparent;
+    color: rgb(0, 240, 240);
+}
+
+#chatbox > div > p {
     word-wrap: break-word;
+    grid-row: 2;
+    grid-column: 2;
+    font-size: small;
 }
 
 #chat_titlebox {
     margin-bottom: 1vh;
+    padding: 0 1vw;
+    caret-color: transparent;
 }
 
 #msg {
-    width: 11.5vw;
+    width: 11.5 vw;
     margin-right: 1vw;
 }
 
@@ -87,4 +124,22 @@
 
 #inputbox {
     margin-right: 0;
+    padding: 0 0.5vw;
+    grid-row: 2;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

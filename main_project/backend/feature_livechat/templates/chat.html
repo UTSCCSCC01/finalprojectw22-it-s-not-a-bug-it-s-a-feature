@@ -27,21 +27,25 @@
             Stream Title
         </div>
         <div id="live_chat-container">
-            <h1 id = 'chat_titlebox'></h1>
-            <!-- adds name of the streamer to the chatroom title-->
-            <script>
-                const segments = window.location.pathname.split('/');
-                const room = segments.pop() || segments.pop();
-                document.getElementById("chat_titlebox").innerText = room;
-            </script>
-            <div id = 'pinned_message'>
-                <!-- Functionality to be implemented -->
-            </div>
-            <div id = 'chatbox'>
-        
+            <div id = "live_chat-wrap">
+                <h1 id = 'chat_titlebox'></h1>
+                <!-- adds name of the streamer to the chatroom title-->
+                <script>
+                    const segments = window.location.pathname.split('/');
+                    const room = segments.pop() || segments.pop();
+                    document.getElementById("chat_titlebox").innerText = room;
+                </script>
+                <div id = 'pinned_message'>
+                    <!-- Functionality to be implemented -->
+                </div>
+                <div id = 'chatbox-cont'>
+                    <div id = 'chatbox'>
+            
+                    </div>
+                </div>
             </div>
             <form id = 'inputbox' method = 'post'>
-                <input type='text' name='msg' id='msg' placeholder='Say hello to the chat!' autocomplete="off" minlength="1">
+                <input type='text' name='msg' id='msg' placeholder='Say hello to the chat!' autocomplete="off">
                 <button type="submit" class="btn btn-light" id='send_button'>Send</button>
             </form>
         </div>
