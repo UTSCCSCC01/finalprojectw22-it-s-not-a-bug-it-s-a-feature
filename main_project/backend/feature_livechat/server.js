@@ -25,10 +25,10 @@ server.listen(port=8080, '127.0.0.1', () => {
 
 const rooms = {};     // stores streamers as keys and dictionary of viewers as values
 
-// app.get('/', (request, response) =>{
-//     //response.sendFile(__dirname + '/templates/chat.html')     // sends the html file to client
-//     response.sendFile(__dirname + '/templates/test_index.html') 
-// })
+app.get('/', (request, response) =>{
+    //response.sendFile(__dirname + '/templates/chat.html')     // sends the html file to client
+    response.sendFile(__dirname + '/templates/test_index.html') 
+})
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/templates/index.html");
