@@ -84,4 +84,7 @@ passport.user('localLogin', new LocalStaregy({
 }));
 
 
+// TODO: possibly come up with a strategy for streamer set up
+
+
 module.exports = passport;
