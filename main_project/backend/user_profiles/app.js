@@ -1,30 +1,29 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var createError = require('http-errors'),
+    express = require('express'),
+    path = require('path'),
+    cookieParser = require('cookie-parser'),
+    logger = require('morgan');
 
 
-const MongoClient = require('mongodb').MongoClient;
-const passport = require('passport');
-const Strategy = require('passport-local').Strategy;
-const session = require('express-session');
-const flash = require('connect-flash');
-const hbs = require('hbs');
-const authUtils = require('./utils/hash');
-const middleware = require('connect-ensure-login'),
-                  express = require('express'),
-                  Session = require('express-session'),
-                  bodyParse = require('body-parser'),
-                  FileStore = require('session-file-store')(Session),
-                  config = require('./config/default'),
-                  flash = require('connect-flash'),
-                  NodeMediaServer = require('./media_server');
+const MongoClient = require('mongodb').MongoClient,
+      passport = require('passport'),
+      Strategy = require('passport-local').Strategy,
+      session = require('express-session'),
+      flash = require('connect-flash'),
+      hbs = require('hbs'),
+      authUtils = require('./utils/hash'),
+      middleware = require('connect-ensure-login'),
+      express = require('express'),
+      Session = require('express-session'),
+      bodyParse = require('body-parser'),
+      FileStore = require('session-file-store')(Session),
+      config = require('./config/default'),
+      flash = require('connect-flash'),
+      NodeMediaServer = require('./media_server'),
+      authRouter = require('./routes/auth');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
-const authRouter = require('./routes/auth');
+var indexRouter = require('./routes/index'),
+    usersRouter = require('./routes/users');
 
 var app = express();
 // Connect mongodb
