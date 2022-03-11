@@ -6,7 +6,7 @@ var createError = require('http-errors'),
 
 
 const MongoClient = require('mongodb').MongoClient,
-      passport = require('passport'),
+      passport = require('.auth/passport'),
       Strategy = require('passport-local').Strategy,
       session = require('express-session'),
       flash = require('connect-flash'),
@@ -27,44 +27,44 @@ var indexRouter = require('./routes/index'),
 
 var app = express();
 // Connect mongodb
-MongoClient.connect('mongodb://localhost', (err, client) => {
-  if (err) {
-    throw err;
-  }
+// MongoClient.connect('mongodb://localhost', (err, client) => {
+//   if (err) {
+//     throw err;
+//   }
 
-  const db = client.db('account-app');
-  const users = db.collection('users');
-  app.locals.users = users;
-});
+//   const db = client.db('account-app');
+//   const users = db.collection('users');
+//   app.locals.users = users;
+// });
 // Create authentication strategy
-passport.use(new Strategy((username, password, done) => {
-    app.locals.users.findOne({ username }, (err, user) => {
-      if (err) {
-        return done(err);
-      }
+// passport.use(new Strategy((username, password, done) => {
+//     app.locals.users.findOne({ username }, (err, user) => {
+//       if (err) {
+//         return done(err);
+//       }
 
-      if (!user) {
-        return done(null, false);
-      }
+//       if (!user) {
+//         return done(null, false);
+//       }
 
-      if (user.password != authUtils.hashPassword(password)) {
-        return done(null, false);
-      }
+//       if (user.password != authUtils.hashPassword(password)) {
+//         return done(null, false);
+//       }
 
-      return done(null, user);
-    });
-  }
-));
+//       return done(null, user);
+//     });
+//   }
+// ));
 
 //Serializer
-passport.serializeUser((user, done) => {
-  done(null, user._id);
-});
+// passport.serializeUser((user, done) => {
+//   done(null, user._id);
+// });
 
-// Deserializer
-passport.deserializeUser((id, done) => {
-  done(null, { id });
-});
+// // Deserializer
+// passport.deserializeUser((id, done) => {
+//   done(null, { id });
+// });
 
 // view engine setup
 app.use(express.static('public'));
@@ -79,7 +79,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.user(passport.initialize());
+app.use(passport.session());
 app.use(session({
   // secret: 'secret',
   // resave: false,
@@ -91,8 +92,6 @@ app.use(session({
   maxAge : Date().now + (60 * 1000 * 30)
 }));
 
-app.use(passport.initialize());
-app.use(passport.session());
 app.use(flash());
 
 app.use((req, res, next) => {
@@ -100,10 +99,15 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//login and reg strategies 
+app.use('/login', require('./routes/login'));
+app.user('/register', require('./routes/register'));
 
-app.use('/auth', authRouter);
+app.use('/', indexRouter);
+
+// app.use('/users', usersRouter);
+
+// app.use('/auth', authRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
