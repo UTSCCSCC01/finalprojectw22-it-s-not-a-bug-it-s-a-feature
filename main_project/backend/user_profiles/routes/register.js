@@ -17,7 +17,7 @@ router.get('/',
  
 router.post('/',
     require('connect-ensure-login').ensureLoggedOut(),
-    passport.authenticate('localRegister', {
+    passport.authenticate('LocalRegister', {
         successRedirect : '/',
         failureRedirect : '/register',
         failureFlash : true

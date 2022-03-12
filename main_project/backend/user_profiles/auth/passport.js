@@ -1,6 +1,6 @@
 const passport = require('passport'),
-    LocalStaregy = require('passport-local').Strategy,
-    User = require('../database/UserSchema').User,
+    LocalStrategy = require('passport-local').Strategy,
+    User = require('../database/Schema').User,
     shortid = require('shortid');
 
 
@@ -16,15 +16,17 @@ passport.deserializeUser( (obj, cb) => {
 
 // user registration 
 
-passport.use('LocalRegister', new LocalStaregy({
-    nameField: 'name',
+passport.use('LocalRegister', new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password',
     passReqToCallback: true
     },
-    (req, name, email, password, done) => {
+    (req, email, password, done) => {
+        
         // cheking for an already existing user
-        User.findOne({$or: [{email: email}, {username: req.body.username}]},  (err, user) => {
+        
+        User.findOne({$or: [{email: email} , {username: req.body.username}]},  (err, user) => {
+        
         if (err)
             return null;
         // if user already exists 
@@ -32,7 +34,7 @@ passport.use('LocalRegister', new LocalStaregy({
             if(user.email === email) {
                 req.flash('email', 'email already taken');
             }
-            if(user.username == username) {
+            if(user.username == req.body.username) {
                 req.flash('username', 'username is already taken');
             }
             return(null, false);
@@ -42,7 +44,6 @@ passport.use('LocalRegister', new LocalStaregy({
             // TODO: figure out a stream room schema to keep
             // track of streamer mods and more
             let user = new User();
-            user.name = name;
             user.email = email;
             user.password = password;
             user.isStreamer = false;
@@ -62,7 +63,7 @@ passport.use('LocalRegister', new LocalStaregy({
 
 // user auth
 
-passport.use('localLogin', new LocalStaregy({
+passport.use('localLogin', new LocalStrategy({
     usernameField: 'email',
     passwordField: 'passowrd',
     passReqToCallback: true
