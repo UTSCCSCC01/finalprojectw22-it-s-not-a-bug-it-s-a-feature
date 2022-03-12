@@ -62,7 +62,7 @@ passport.use('LocalRegister', new LocalStaregy({
 
 // user auth
 
-passport.user('localLogin', new LocalStaregy({
+passport.use('localLogin', new LocalStaregy({
     usernameField: 'email',
     passwordField: 'passowrd',
     passReqToCallback: true
