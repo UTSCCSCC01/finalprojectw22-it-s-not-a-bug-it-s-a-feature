@@ -9,4 +9,4 @@ var StreamRoomSchema = new mongoose.Schema({
     ]
   });
 
-  module.exports = mongoose.model('StreamRoom', StreamRoomSchema);
+module.exports = mongoose.model('StreamRoom', StreamRoomSchema);
