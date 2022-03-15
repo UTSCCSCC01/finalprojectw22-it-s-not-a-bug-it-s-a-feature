@@ -12,7 +12,7 @@ let UserSchema = new Schema({
     password: String,
     isStreamer: Boolean,
     stream_key: String,
-    stream_room: String,
+    stream_room: { type: Schema.Types.ObjectId, ref: 'StreamRoom', unique: true},
     followers: Array,
     following: Array,
 

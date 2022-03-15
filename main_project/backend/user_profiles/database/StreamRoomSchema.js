@@ -5,8 +5,9 @@ var StreamRoomSchema = new mongoose.Schema({
     host: { type: mongoose.Schema.Types.ObjectId, ref: 'User', unique: true},
     title: String,
     moderators: [
-        {type: Schema.Types.ObjectId, ref: 'User'}
+        {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
     ]
   });
 
-module.exports = mongoose.model('StreamRoom', StreamRoomSchema);
+// module.exports = mongoose.model('StreamRoom', StreamRoomSchema);
+module.exports = StreamRoomSchema;
