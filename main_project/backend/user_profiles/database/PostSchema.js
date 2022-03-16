@@ -8,7 +8,7 @@ const PostSchema = new mongoose.Schema(
     },
     desc: {
       type: String,
-      max: 500,
+      max: 285,
     },
     img: {
       type: String,
@@ -16,6 +16,10 @@ const PostSchema = new mongoose.Schema(
     likes: {
       type: Array,
       default: [],
+    },
+    likeCounter: {
+      type: Number,
+      default: 0
     },
   },
   { timestamps: true }
