@@ -1,9 +1,13 @@
 Participants:
+
 Sasan Makvandi
+
 Yoshio Kondoh
+
 Shau Ching Michael Li
-Yuchen Bao
+
 Eric Hua
+
 Trong Anh Doan
 
 
