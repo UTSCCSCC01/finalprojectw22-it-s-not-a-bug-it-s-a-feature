@@ -1,6 +1,6 @@
 import React from "react";
-import {Router, Router} from 'react-router-dom';
-import Navbar from '.Navbar';
+import {Router, Route} from 'react-router-dom';
+import Navbar from './Navbar';
 import LiveStreams from './LiveStreams';
 import Settings from './Settings';
 

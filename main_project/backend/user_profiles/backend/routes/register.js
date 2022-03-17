@@ -8,7 +8,6 @@ router.get('/',
         res.render('register', {
             user : null,
             errors : {
-                name: req.flash('name'), 
                 username : req.flash('username'),
                 email : req.flash('email')
             }

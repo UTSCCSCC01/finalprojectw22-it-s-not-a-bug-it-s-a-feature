@@ -5,18 +5,27 @@ let mongoose = require('mongoose'),
 
 
 
-let UserSchema = new Schema({
-    name: String,
-    username: String,
-    email: String,
-    password: String,
-    isStreamer: Boolean,
-    stream_key: String,
-    stream_room: String,
-    followers: Array,
-    following: Array,
+// let UserSchema = new Schema({
+//     name: String,
+//     username: String,
+//     email: String,
+//     password: String,
+//     isStreamer: Boolean,
+//     stream_key: String,
+//     stream_room: String,
+//     followers: Array,
+//     following: Array,
 
+// });
+
+
+let UserSchema = new Schema({
+    username: String,
+    email : String,
+    password: String,
+    stream_key : String,
 });
+
 
 
 UserSchema.methods.generateHash = (password) => {

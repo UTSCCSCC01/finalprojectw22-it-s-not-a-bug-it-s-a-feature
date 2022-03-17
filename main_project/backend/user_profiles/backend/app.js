@@ -45,7 +45,7 @@ app.use('/login', require('./routes/login'));
 app.use('/register', require('./routes/register'));
 app.use('/settings', require('./routes/settings'));
 app.use('/streams', require('./routes/streams'));
-app.use('/user', require('./routes/users'));
+app.use('/user', require('./routes/user'));
 
 app.get('/logout', (req, res) => {
     req.logout();

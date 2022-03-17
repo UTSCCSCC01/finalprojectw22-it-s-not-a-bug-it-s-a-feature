@@ -43,19 +43,29 @@ passport.use('LocalRegister', new LocalStrategy({
         {
             // TODO: figure out a stream room schema to keep
             // track of streamer mods and more
+            // let user = new User();
+            // user.email = email;
+            // user.password = password;
+            // user.isStreamer = false;
+            // user.stream_key = null;
+            // user.stream_room = null;
+            // user.followers = [];
+            // user.following = [];
+            // user.save( (err) => {
+            //     if (err)
+            //         throw err;
+            //     return done(null, user);
+            // });
             let user = new User();
             user.email = email;
-            user.password = password;
-            user.isStreamer = false;
-            user.stream_key = null;
-            user.stream_room = null;
-            user.followers = [];
-            user.following = [];
+            user.password = user.generateHash(password);
+            user.username = req.body.username;
+            user.stream_key = shortid.generate();
             user.save( (err) => {
                 if (err)
                     throw err;
                 return done(null, user);
-            });
+                });
         }
     });
 }));
