@@ -188,8 +188,8 @@ function DashboardContent() {
               </Grid>
               <Grid item xs={12} md={4} lg={3}>
                 <Card sx={{display: 'flex'}}>
-                    <Typography component="div" variant="h5">
-                        This is chat (not working rn)
+                    <Typography variant="body2">
+                        Player1: Hello World!
                     </Typography>
                 </Card>
               </Grid>
