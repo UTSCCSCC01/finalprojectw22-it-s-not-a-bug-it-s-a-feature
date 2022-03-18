@@ -188,9 +188,13 @@ function DashboardContent() {
               </Grid>
               <Grid item xs={12} md={4} lg={3}>
                 <Card sx={{display: 'flex'}}>
-                    <Typography variant="body2">
-                        Player1: Hello World!
-                    </Typography>
+                  <Box sx={{ display: 'flex', flexDirection: 'row', height: 600}}>
+                    <CardContent sx={{ flex: '1 0 auto' }}>
+                      <Typography variant="body2">
+                            Player1: Hello World!
+                      </Typography>
+                    </CardContent>
+                  </Box>
                 </Card>
               </Grid>
               <Grid item xs={12}>
