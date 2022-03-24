@@ -1,0 +1,195 @@
+.Profile_Post .posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Profile_Post .posts .textPost {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+    width: 1000px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.Profile_Post .header {
+    width: 950px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+}
+
+.Profile_Post .postInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-evenly;
+    margin-left: 30px;
+}
+
+.Profile_Post .header .proPicImg {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    float: left;
+}
+
+.Profile_Post .header .userName {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.Profile_Post .header .postDate {
+    font-size: 15px;
+}
+
+.Profile_Post .header .options {
+    margin-left: auto;
+    position: relative;
+    display: inline-block;
+}
+
+.Profile_Post .header .optionBtn {
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-left: auto;
+    padding: 13px 16px;
+    cursor: pointer;
+}
+
+.Profile_Post .header .options:hover .dropdown-content {
+    display: block;
+}
+
+.Profile_Post .header .options .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #282c34;
+    border-radius: 5px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.Profile_Post .header .options .saveBtn {
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 13px 16px;
+    cursor: pointer;
+}
+
+.Profile_Post .header .options .deleteBtn {
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 13px 16px;
+    cursor: pointer;
+}
+
+.Profile_Post .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 950px;
+    margin: auto;
+    font-size: 20px;
+}
+
+.Profile_Post .text {
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.Profile_Post .bodyImg {
+    margin: auto;
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.Profile_Post .postCount {
+    margin: auto;
+    width: 950px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+.Profile_Post #likeCount {
+    margin-right: auto;
+}
+
+.Profile_Post .actionBtns {
+    width: 950px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 1px solid #606160;
+}
+
+.Profile_Post .actionBtns .likeBtn {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 13px 16px;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.Profile_Post .actionBtns .likeBtn .fa.fa-thumbs-o-up{
+    padding-right: 10px;
+}
+
+.Profile_Post .actionBtns .commentBtn {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 13px 16px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.Profile_Post .actionBtns .commentBtn .fa.fa-comment-o{
+    padding-right: 10px;
+}
+
+
+.Profile_Post .actionBtns .shareBtn {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 13px 16px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.Profile_Post .actionBtns .shareBtn .fa.fa-share-square-o{
+    padding-right: 10px;
+}
+
