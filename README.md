@@ -13,22 +13,14 @@ This is a full stack project. The backend is set to the Django framework, fronte
 
 
 ### backend
-The backend of this fullstack project has been set to Django. Before proceeding to running the server, there are a few steps we need to take.
+The backend of this fullstack project has been set to Node.js. Before proceeding to running the server, there are a few steps we need to take.
 
-- Firstly, change directory to Enviornments. *IT IS CRITICAL THAT YOU HAVE PYTHON 3.10.2 INSTALLED*. Then, create a virtual environment for this project using the command:
+- Firstly, ffmpeg is vital to running the video server. You can use the link below as a guide to install it on Windows. Users on Mac and Linux should already have ffmpeg installed.
+https://www.youtube.com/watch?v=r1AtmY-RMyQ&start=10
 
-python3 -m venv .venv
-
-- Run the environment. You can do so using the following command:
-
-Enviornments\.venv\Scripts\activate
-
-And with that done, you are in the virtual environment. 
-The requirements.txt file includes all the packages you are going to need moving forward. Please install these packages with the following command:
-pip install -r requirements.txt
-
-- You are now ready to move on to running the server. While in the main_project folder simply write the following command:
-python manage.py runserver
+- Once ffmpeg is installed, change the installation path in backend/livestream/backend/config/default.js to your machine's installation path for ffmpeg. 
+- once in the local livestream folder, run "npm run watch" to run the webpack
+- then run "npm run start to run the server"
 
 
 ### Frontend
