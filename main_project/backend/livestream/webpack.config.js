@@ -4,7 +4,7 @@ const devMode = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
  
 module.exports = {
-    entry : './client/index.js',
+    entry : './frontend/index.js',
     output : {
         filename : 'bundle.js',
         path : path.resolve(__dirname, 'public')

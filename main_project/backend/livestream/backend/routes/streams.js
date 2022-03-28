@@ -1,7 +1,7 @@
 
 const express = require('express'),
     router = express.Router(),
-    User = require('../database/Schema').User;
+    User = require('../models/Schema').User;
  
 router.get('/info',
     require('connect-ensure-login').ensureLoggedIn(),
