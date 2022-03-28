@@ -1,35 +1,35 @@
 import React from "react";
-import './css/SignUp.css';
+import './css/EditProfile.css';
 
-function SignUp() {
+function EditProfile() {
     return (
-        <div className="SignUp">
+        <div className="EditProfile">
             <h1> </h1>
-            <h1>Sign Up</h1>
+            <h1>Edit Profile</h1>
             <div className="filds">
                 <form action="/" method="POST" className="form">
-                    <div className="email">
-                        <h2>Email:</h2>
-                        <input type="text" placeholder="Email"></input>
-                    </div>
-                    <div className="userName">
-                        <h2>User Name:</h2>
+                    <div className="changeUserName">
+                        <h2>Change User Name:</h2>
                         <input type="text" placeholder="User Name"></input>
                     </div>
-                    <div className="password">
-                        <h2>Password:</h2>
+                    <div className="ChangePassword">
+                        <h2>Change Password:</h2>
                         <input type="text" placeholder="Password"></input>
                     </div>
                     <div className="confirmPassword">
                         <h2>Confirm Password:</h2>
                         <input type="text" placeholder="Confirm Password"></input>
                     </div>
+                    <div className="changeEmail">
+                        <h2>Change Email:</h2>
+                        <input type="text" placeholder="Email"></input>
+                    </div>
                     <h1></h1>
-                    <button type="submit" className="signUpBtn">Sign Up</button>
+                    <button type="submit" className="changeBtn">Confirm Changes</button>
                 </form>
             </div>   
         </div>
     );
 }
 
-export default SignUp;
+export default EditProfile;
