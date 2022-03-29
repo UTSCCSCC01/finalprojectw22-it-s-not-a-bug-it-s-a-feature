@@ -105,6 +105,7 @@ app.use('/register', require('./routes/register'));
 app.use('/settings', require('./routes/settings'));
 app.use('/streams', require('./routes/streams'));
 app.use('/user', require('./routes/users'));
+app.use('/post', require('./routes/post'));
 
 app.get('/logout', (req, res) => {
     req.logout();
