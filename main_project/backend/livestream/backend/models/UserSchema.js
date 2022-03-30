@@ -26,7 +26,8 @@ var UserSchema = new mongoose.Schema({
   // not too sure this'll work
   isStreamer:Boolean,
   stream_key: String,
-  stream_room: { type: Schema.Types.ObjectId, ref: 'StreamRoom', unique: true},
+  //stream_room: { type: Schema.Types.ObjectId, ref: 'StreamRoom', unique: true},
+  stream_room: String,
   followers: Array,
   following: Array,
   bio: String,
