@@ -13,7 +13,7 @@ const express = require('express'),
     hbs = require('hbs'),
     authUtils = require('./utils/hash'),
     User = require('./models/UserSchema'),
-    authRouter = require('./routes/users');
+    authRouter = require('./routes/auth');
 
 const node_media_server = require('./media_server');
 const thumbnail_generator = require('./cron/thumbnails');

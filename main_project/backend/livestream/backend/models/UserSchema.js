@@ -54,4 +54,4 @@ UserSchema.methods.generateStreamKey = () => {
 };
 
 //module.exports = UserSchema = mongoose.model('User', UserSchema);
-module.exports = UserSchema;
+module.exports = UserSchema = mongoose.model('User', UserSchema);
