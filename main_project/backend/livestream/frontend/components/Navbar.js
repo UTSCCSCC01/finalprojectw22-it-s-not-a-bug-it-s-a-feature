@@ -1,37 +1,44 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React from "react";
+import './css/NavBar.css';
+import { Link } from 'react-router-dom';
 
-export default class Navbar extends React.Component {
-    render() {
-        return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div className="container">
-                    <Link to={'/'} className={'navbar-brand'}>
-                        NodeStreamy
-                    </Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"/>
-                    </button>
+function NavBar() {
+    return (
+        <div className="NavBar">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+            <div className="header">
+                <div className="left-header">
 
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav ml-auto">
-                            <li className="nav-item float-right">
-                                <Link className={'nav-link'} to={'/settings'}>
-                                    Go Live
-                                </Link>
-                            </li>
-                            <li className="nav-item float-right">
-                                <a className="nav-link" target="_blank" href="https://github.com/waleedahmad">Github</a>
-                            </li>
-                            <li className="nav-item float-right">
-                                <a className="nav-link" href="/Logout">Logout</a>
-                            </li>
-                        </ul>
+                    <div className="menu-dropdown">
+                        <Link to="/" className="dropdownButton"><i className="fa fa-bars"></i></Link>
+                        <div className="dropdown-content">
+                            <Link to="/">Home</Link>
+                            <Link to="/BrowseStream" className="headerButton">Browse Stream</Link>
+                            <Link to="Stream">Start Stream</Link>
+                        </div>
+                    </div>
+
+                    <div className="logo">
+                        <Link to="/">Tuneln.TV</Link>
+                    </div>
+
+                </div>
+                <div className="search">
+                    <form action="/" method="GET" className="form">
+                        <input type="text" placeholder="Search"></input>
+                        <button type="submit"><i className="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div className="user-dropdown">
+                    <Link to="/Profile" className="dropdownButton"><i className="fa fa-user"></i></Link>
+                    <div className="dropdown-content">
+                        <Link to="/Login" className="headerButton">Log In</Link>
+                        <Link to="/SignUp">Sing Up</Link>
                     </div>
                 </div>
-            </nav>
-        )
-    }
+            </div>
+        </div>
+    );
 }
+
+export default NavBar;
