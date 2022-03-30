@@ -24,6 +24,9 @@ const session = require('express-session');
 var createError = require('http-errors'),
     cookieParser = require('cookie-parser'),
     logger = require('morgan');
+  
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
 //const { Strategy } = require('passport-local');
 
@@ -100,11 +103,14 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Register app routes
-app.use('/login', require('./routes/login'));
-app.use('/register', require('./routes/register'));
+//app.use('/login', require('./routes/login'));
+//app.use('/register', require('./routes/register'));
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/auth', authRouter);
 app.use('/settings', require('./routes/settings'));
 app.use('/streams', require('./routes/streams'));
-app.use('/user', require('./routes/users'));
+//app.use('/user', require('./routes/users'));
 
 app.get('/logout', (req, res) => {
     req.logout();
