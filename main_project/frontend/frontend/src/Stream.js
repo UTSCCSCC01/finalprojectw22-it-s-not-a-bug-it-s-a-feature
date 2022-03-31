@@ -11,7 +11,7 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import LiveStream from './Livestreams.js';
+import LiveStream from './LiveStreams.js';
 import axios from 'axios';
 
 function Copyright(props) {
