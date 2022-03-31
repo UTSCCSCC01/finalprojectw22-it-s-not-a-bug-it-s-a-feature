@@ -26,7 +26,7 @@ export default class Login extends Component {
             name: this.state.name,
             email: this.state.email
         };
-        axios.post('http://localhost:3333/users/create', userObject)
+        axios.post('http://localhost:3333/auth/login', userObject)
             .then((res) => {
                 console.log(res.data)
             }).catch((error) => {
