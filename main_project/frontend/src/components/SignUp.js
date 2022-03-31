@@ -1,5 +1,7 @@
 import React from "react";
 import '../css/SignUp.css';
+import axios from "axios";
+import { Component } from "react";
 
 
 export default class Login extends Component {
