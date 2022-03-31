@@ -2,8 +2,8 @@ import React from "react";
 import './css/Profile.css';
 import { Route, Link, BrowserRouter, Routes } from 'react-router-dom';
 import Profile_Post from "./Profile_Post";
-import banner from './banner.jpg';
-import proPic from './proPic.jpg'
+import banner from './images/banner.jpg';
+import proPic from './images/proPic.jpg'
 
 
 

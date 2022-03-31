@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import './VideoPlayer.js';
-import VideoPlayer from './VideoPlayer.js';
+import LiveStream from './Livestreams.js';
 
 function Copyright(props) {
   return (
@@ -64,7 +64,7 @@ function DashboardContent() {
               <Grid item xs={12} md={8} lg={9}>
               <Card>
                 <CardMedia>
-                  <VideoPlayer />
+                  <LiveStream />
                   </CardMedia>
                 </Card>
               </Grid>
