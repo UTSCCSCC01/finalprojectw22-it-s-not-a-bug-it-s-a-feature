@@ -1,8 +1,8 @@
 import React from "react";
 import './css/Profile_Post.css';
 import { Link } from 'react-router-dom';
-import proPic from './proPic.jpg'
-import gt7 from './gt7.jpg'
+import proPic from './images/proPic.jpg';
+import gt7 from './images/gt7.jpg';
 
 
 var likeCount= 10;
