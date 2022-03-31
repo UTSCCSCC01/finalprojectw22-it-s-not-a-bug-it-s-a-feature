@@ -11,8 +11,8 @@ import Card from '@mui/material/Card';
 import Button from '@mui/material/Button';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import ReactPlayer from 'react-player';
-import 'stream-chat-react/dist/css/index.css';
+import './VideoPlayer.js';
+import LiveStream from './Livestreams.js';
 
 function Copyright(props) {
   return (
@@ -64,15 +64,7 @@ function DashboardContent() {
               <Grid item xs={12} md={8} lg={9}>
               <Card>
                 <CardMedia>
-                  <ReactPlayer 
-                    className='stream'
-                    url= 'https://cdn.discordapp.com/attachments/881566442770808842/953573390101401660/test_Trim_4_Trim.mp4'
-                    // Use database query here (?)
-                    width='100%'
-                    height='100%'
-                    controls= {true}
-                    // Enter whatever stream here, this is just a placeholder
-                />
+                  <LiveStream />
                   </CardMedia>
                 </Card>
               </Grid>
