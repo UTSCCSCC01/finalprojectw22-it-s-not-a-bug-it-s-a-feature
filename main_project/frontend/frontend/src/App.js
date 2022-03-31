@@ -1,15 +1,16 @@
 import React from 'react';
 import './css/App.css';
 import { Route, Link, BrowserRouter, Routes } from 'react-router-dom';
-import Login from './Login';
+import Login from './components/Login';
 import NavBar from './NavBar';
 import Home from './Home';
 import BrowseStream from './BrowseStream';
 import Stream from './Stream';
-import SignUp from './SignUp';
+import SignUp from './components/SignUp';
 import Profile from './Profile';
 import Profile_Post from './Profile_Post';
 import EditProfile from './EditProfile';
+//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
