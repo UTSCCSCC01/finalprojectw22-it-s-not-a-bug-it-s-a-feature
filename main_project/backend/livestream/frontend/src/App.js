@@ -10,7 +10,7 @@ import SignUp from './components/SignUp';
 import Profile from './Profile';
 import Profile_Post from './Profile_Post';
 import EditProfile from './EditProfile';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+//import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

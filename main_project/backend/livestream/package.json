@@ -12,7 +12,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@chakra-ui/react": "^1.8.7",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@fontsource/roboto": "^4.5.5",
+    "@mui/icons-material": "^5.5.1",
+    "@mui/material": "^5.5.3",
+    "@mui/styled-engine-sc": "^5.5.2",
     "@popperjs/core": "^2.11.0",
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^14.0.2",
     "axios": "^0.24.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -27,6 +37,7 @@
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "express-session": "^1.17.2",
+    "framer-motion": "^6.2.8",
     "hbs": "^4.2.0",
     "history": "^5.1.0",
     "http-errors": "^2.0.0",
@@ -41,8 +52,11 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^4.3.1",
+    "react-scripts": "^5.0.0",
     "shortid": "^2.2.16",
-    "video.js": "^7.17.0"
+    "styled-components": "^5.3.5",
+    "video.js": "^7.17.0",
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -60,5 +74,23 @@
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.2"
   },
-  "proxy": "http://localhost:3333"
+  "proxy": "http://localhost:3333",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
