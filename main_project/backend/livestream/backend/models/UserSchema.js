@@ -54,5 +54,5 @@ UserSchema.methods.generateStreamKey = () => {
   return shortid.generate();
 };
 
-//module.exports = UserSchema = mongoose.model('User', UserSchema);
-module.exports = UserSchema;
+module.exports = UserSchema = mongoose.model('User', UserSchema);
+// module.exports = UserSchema;
