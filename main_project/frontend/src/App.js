@@ -10,6 +10,7 @@ import SignUp from './components/SignUp';
 import Profile from './components/Profile';
 import Profile_Post from './Profile_Post';
 import EditProfile from './EditProfile';
+import Settings from './Settings';
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route exact path="/Profile/Profile_Post" element={ <Profile_Post/>} />
         </Route>
         <Route exact path="/EditProfile" element={ <EditProfile/>} />
+        <Route exact path="/Settings" element={ <Settings/>} />
         
       </Routes>
 

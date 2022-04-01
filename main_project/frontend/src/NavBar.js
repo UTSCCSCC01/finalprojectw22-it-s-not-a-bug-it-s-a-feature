@@ -33,7 +33,8 @@ function NavBar() {
                     <Link to="/Profile" className="dropdownButton"><i className="fa fa-user"></i></Link>
                     <div className="dropdown-content">
                         <Link to="/Login" className="headerButton">Log In</Link>
-                        <Link to="/SignUp" className="headerButton"> Sing Up</Link>
+                        <Link to="/SignUp" className="headerButton"> Sign Up</Link>
+                        <Link to="/Settings" className="headerButton"> Settings</Link>
                     </div>
                 </div>
             </div>
