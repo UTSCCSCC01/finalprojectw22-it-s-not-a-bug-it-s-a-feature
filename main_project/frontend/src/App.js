@@ -7,7 +7,7 @@ import Home from './Home';
 import BrowseStream from './BrowseStream';
 import Stream from './Stream';
 import SignUp from './components/SignUp';
-import Profile from './Profile';
+import Profile from './components/Profile';
 import Profile_Post from './Profile_Post';
 import EditProfile from './EditProfile';
 //import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
