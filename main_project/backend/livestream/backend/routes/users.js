@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const ObjectId = require('mongodb').ObjectId;
-const User = require('../models/UserSchema');
+const User = require('../models/UserSchema')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -51,4 +51,4 @@ router.get('/:username', (req, res, next) => {
 });
 
 module.exports = router;
-module.exports = router;
+// module.exports = UserSchema = mongoose.model('User', UserSchema);
