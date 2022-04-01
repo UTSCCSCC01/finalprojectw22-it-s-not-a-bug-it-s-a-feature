@@ -26,6 +26,7 @@ router.get('/register', (req, res, next) => {
 
 // POST register page
 router.post('/register', (req, res, next) => {
+  console.log('we are here');
   User.findOne({ username: req.body.username}).then((user) => {
     if (user) {
       res.redirect('/auth/login'); // User already exists

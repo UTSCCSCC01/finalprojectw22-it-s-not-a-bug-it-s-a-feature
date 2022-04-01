@@ -15,6 +15,8 @@ const express = require('express'),
     User = require('./models/UserSchema'),
     authRouter = require('./routes/auth');
 
+let cors = require('cors');
+
 const node_media_server = require('./media_server');
 const thumbnail_generator = require('./cron/thumbnails');
 
@@ -105,6 +107,7 @@ app.use(passport.session());
 // Register app routes
 //app.use('/login', require('./routes/login'));
 //app.use('/register', require('./routes/register'));
+app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);

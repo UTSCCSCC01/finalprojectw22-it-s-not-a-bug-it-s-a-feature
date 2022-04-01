@@ -18,17 +18,36 @@
     font-size: 30px;
 }
 
-.SignUp .email {
+.SignUp .Email {
     display: flex;
     flex-direction: column;
     align-items: left;
 }
 
-.SignUp .userName {
+.SignUp .Username {
     display: flex;
     flex-direction: column;
     align-items: left;
 }
+
+.SignUp .Description {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.SignUp .Location {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.SignUp .Avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
 
 .SignUp .password {
     display: flex;
